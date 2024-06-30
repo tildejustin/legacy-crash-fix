@@ -1,24 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "legacy-crash-fix",
   "version": "${version}",
-  "name": "",
-  "description": "",
+  "name": "Legacy Crash Fix",
+  "description": "fixes assorted crashes in legacy versions of the game",
   "authors": [
-    "tildejustin"
+    {
+      "name": "tildejustin",
+      "contact": {
+        "homepage": "https://github.com/tildejustin"
+      }
+    }
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/modid",
-    "sources": "https://github.com/tildejustin/modid",
-    "issues": "https://github.com/tildejustin/modid/issues"
+    "homepage": "https://github.com/tildejustin/legacy-crash-fix",
+    "sources": "https://github.com/tildejustin/legacy-crash-fix",
+    "issues": "https://github.com/tildejustin/legacy-crash-fix/issues"
   },
   "license": "MIT",
   "environment": "*",
   "mixins": [
-    "modid.mixins.json"
+    "legacy-crash-fix.mixins.json"
   ],
   "depends": {
-    "minecraft": "*",
-    "fabricloader": ">=0.15.0"
+    "minecraft": ">=1.3 <1.8",
+    "fabricloader": ">=0.16.0"
   }
 }
