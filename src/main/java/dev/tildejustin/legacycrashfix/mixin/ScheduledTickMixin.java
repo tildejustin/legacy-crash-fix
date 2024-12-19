@@ -17,7 +17,7 @@ public abstract class ScheduledTickMixin {
     @Shadow
     private long id;
 
-    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/ScheduledTick;id:J", opcode = Opcodes.PUTFIELD))
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/ScheduledTick;id:J", opcode = Opcodes.PUTFIELD, remap = true), remap = false)
     private void atomicIdCounter(ScheduledTick tick, long l) {
         this.id = atomicIdCounter.incrementAndGet();
     }
